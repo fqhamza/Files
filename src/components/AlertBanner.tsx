@@ -11,12 +11,12 @@ export default function AlertBanner({ budgetExceeded, goalReached }: AlertBanner
   return (
     <div className="mb-6 space-y-4">
       {budgetExceeded && (
-        <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-lg shadow-md">
+        <div className="bg-red-900/20 border-l-4 border-red-500 p-4 rounded-lg shadow-md text-red-200">
           <div className="flex items-center">
-            <AlertCircle className="w-6 h-6 text-red-500 mr-3" />
+            <AlertCircle className="w-6 h-6 text-red-400 mr-3" />
             <div>
-              <h3 className="text-red-800 font-semibold">Budget Exceeded!</h3>
-              <p className="text-red-700 text-sm mt-1">
+              <h3 className="text-red-300 font-semibold">Budget Exceeded!</h3>
+              <p className="text-red-300/80 text-sm mt-1">
                 You have exceeded your monthly budget. Consider reviewing your expenses.
               </p>
             </div>
@@ -25,12 +25,12 @@ export default function AlertBanner({ budgetExceeded, goalReached }: AlertBanner
       )}
 
       {goalReached && (
-        <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded-lg shadow-md">
+        <div className="bg-green-900/20 border-l-4 border-green-500 p-4 rounded-lg shadow-md text-green-200">
           <div className="flex items-center">
-            <PartyPopper className="w-6 h-6 text-green-500 mr-3" />
+            <PartyPopper className="w-6 h-6 text-green-400 mr-3" />
             <div>
-              <h3 className="text-green-800 font-semibold">Savings Goal Reached!</h3>
-              <p className="text-green-700 text-sm mt-1">
+              <h3 className="text-green-300 font-semibold">Savings Goal Reached!</h3>
+              <p className="text-green-300/80 text-sm mt-1">
                 Congratulations! You have reached your savings goal. Keep up the great work!
               </p>
             </div>

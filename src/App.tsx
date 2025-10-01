@@ -114,16 +114,16 @@ function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
-        <div className="text-xl text-gray-600">Loading...</div>
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-xl text-gray-300">Loading...</div>
       </div>
     );
   }
 
   if (!settings) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
-        <div className="text-xl text-gray-600">Unable to load settings</div>
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-xl text-gray-300">Unable to load settings</div>
       </div>
     );
   }
@@ -145,15 +145,15 @@ function App() {
   const goalReached = currentBalance >= parseFloat(settings.savings_goal.toString());
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8 px-4 shadow-lg">
+    <div className="min-h-screen bg-neutral-950">
+      <div className="bg-gradient-to-r from-neutral-900 to-black text-white py-8 px-4 shadow-lg">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl font-bold mb-2">Money Management</h1>
-          <p className="text-blue-100">Track your finances and reach your goals</p>
+          <p className="text-gray-300">Track your finances and reach your goals</p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-8 text-gray-100">
         <AlertBanner budgetExceeded={budgetExceeded} goalReached={goalReached} />
 
         <StatsCards

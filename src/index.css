@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dark theme base colors */
+@layer base {
+  html, body, #root {
+    @apply min-h-screen;
+  }
+}

@@ -42,8 +42,8 @@ export default function TransactionForm({ onAddTransaction }: TransactionFormPro
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-      <h2 className="text-xl font-bold text-gray-800 mb-6">Add Transaction</h2>
+    <div className="bg-neutral-900 rounded-lg shadow-md p-6 mb-8 border border-neutral-800 text-gray-100">
+      <h2 className="text-xl font-bold text-gray-100 mb-6">Add Transaction</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex gap-4">
@@ -53,7 +53,7 @@ export default function TransactionForm({ onAddTransaction }: TransactionFormPro
             className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all ${
               type === 'income'
                 ? 'bg-green-600 text-white shadow-md'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                : 'bg-neutral-800 text-gray-300 hover:bg-neutral-700 border border-neutral-700'
             }`}
           >
             Income
@@ -64,7 +64,7 @@ export default function TransactionForm({ onAddTransaction }: TransactionFormPro
             className={`flex-1 py-3 px-4 rounded-lg font-semibold transition-all ${
               type === 'expense'
                 ? 'bg-red-600 text-white shadow-md'
-                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                : 'bg-neutral-800 text-gray-300 hover:bg-neutral-700 border border-neutral-700'
             }`}
           >
             Expense
@@ -72,13 +72,13 @@ export default function TransactionForm({ onAddTransaction }: TransactionFormPro
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Category *
           </label>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-neutral-700 bg-neutral-800 text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             required
           >
             <option value="">Select a category</option>
@@ -91,7 +91,7 @@ export default function TransactionForm({ onAddTransaction }: TransactionFormPro
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Amount *
           </label>
           <input
@@ -101,13 +101,13 @@ export default function TransactionForm({ onAddTransaction }: TransactionFormPro
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             placeholder="0.00"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-neutral-700 bg-neutral-800 text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-gray-500"
             required
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">
             Description
           </label>
           <input
@@ -115,7 +115,7 @@ export default function TransactionForm({ onAddTransaction }: TransactionFormPro
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="Optional description"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full px-4 py-2 border border-neutral-700 bg-neutral-800 text-gray-100 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent placeholder:text-gray-500"
           />
         </div>
 
